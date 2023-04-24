@@ -16,7 +16,6 @@ const LeftNav = () => {
         <div>
             <h5 className='fw-bold'>All category</h5>
             <div>
-                <button className='border border-0 py-2 px-3 mb-4 mt-2 bg-secondary bg-gradient bg-opacity-25 rounded '>National News</button>
 
                 {
                     categories.map(category => <p key={category.id}>
