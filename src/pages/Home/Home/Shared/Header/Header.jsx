@@ -3,11 +3,11 @@ import React from 'react';
 import logo from '../../../../../assets/logo.png';
 import moment from 'moment';
 import Button from 'react-bootstrap/Button';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Marquee from "react-fast-marquee";
-import { FaUser } from 'react-icons/fa';
 
 const Header = () => {
+
     return (
         <Container>
             <div className='text-center'>
@@ -21,24 +21,7 @@ const Header = () => {
                     Match Highlights: Germany vs Spain — as it happened   !   Match Highlights: Germany vs Spain as...
                 </Marquee>
             </div>
-            <Navbar collapseOnSelect expand="lg" >
-                <Container>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="mx-auto">
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/about">About</Nav.Link>
-                            <Nav.Link href="/career">Career</Nav.Link>
-                        </Nav>
-                        <Nav className='align-items-center justify-content-center'>
-                            <Nav.Link href="#deets"><FaUser /></Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
-                                <Button className='px-4' variant="dark">Login</Button>
-                            </Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+
         </Container>
     );
 };
