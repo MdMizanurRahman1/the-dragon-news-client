@@ -5,7 +5,17 @@ import { FaUser } from 'react-icons/fa';
 import { AuthContext } from '../../../../../providers/AuthProvider';
 
 const NavigationBar = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
+
     return (
         <Container>
             <Navbar collapseOnSelect expand="lg" >
@@ -21,7 +31,7 @@ const NavigationBar = () => {
                             {user && <FaUser style={{ fontSize: '25px' }} />}
 
                             {user ?
-                                <Button className='px-4' variant="dark">Logout</Button> :
+                                <Button onClick={handleLogOut} className='px-4' variant="dark">Logout</Button> :
                                 <Link to='/login'>
                                     <Button className='px-4' variant="dark">Login</Button>
                                 </Link>
